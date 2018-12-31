@@ -23,19 +23,34 @@ public class Images {
 	
 	public static void loadImages() {
 		
+		mapOfImages.put("background", getImage("background"));
 		mapOfImages.put("robot", getImage("robot1"));
 		mapOfImages.put("belt", getImage("beltRL1"));
 		mapOfImages.put("hole", getImage("hole1"));
 		mapOfImages.put("fastbelt", getImage("fastbeltRL1"));
-		mapOfImages.put("wall", getImage("wallT4"));
+		//mapOfImages.put("wall", getImage("wallT4"));
+		mapOfImages.put("wall", getImage("wall"));
+		mapOfImages.put("rotateR7", getImage("rotateR7"));
+		mapOfImages.put("rotateL7", getImage("rotateL7"));
+		mapOfImages.put("target1", getImage("target1"));
+		mapOfImages.put("repair", getImage("repair2"));
+		mapOfImages.put("fullRepair", getImage("fullRepair1"));
+		mapOfImages.put("laser1", getImage("laser1"));
+		mapOfImages.put("laser2", getImage("laser2"));
+		mapOfImages.put("laser3", getImage("laser3"));
+		mapOfImages.put("laserBeam1", getImage("laserBeam1"));
+		mapOfImages.put("laserBeam2", getImage("laserBeam2"));
+		mapOfImages.put("laserBeam3", getImage("laserBeam3"));
+		mapOfImages.put("start", getImage("start5"));
 		
-		mapOfImages.put("robotL", Images.rotateImageByDegrees(mapOfImages.get("robot"), 90.0, null));
-		mapOfImages.put("robotT", Images.rotateImageByDegrees(mapOfImages.get("robot"), 180.0, null));
-		mapOfImages.put("robotR", Images.rotateImageByDegrees(mapOfImages.get("robot"), 270.0, null));
-		mapOfImages.put("robotD", Images.rotateImageByDegrees(mapOfImages.get("robot"), 0.0, null));
-		
-		
-		
+		createImageInAll4Directions("robot");
+		createImageInAll4Directions("wall");		
+		createImageInAll4Directions("laser1");		
+		createImageInAll4Directions("laser2");		
+		createImageInAll4Directions("laser3");		
+		createImageInAll4Directions("laserBeam1");
+		createImageInAll4Directions("laserBeam2");
+		createImageInAll4Directions("laserBeam3");
 		
 		mapOfImages.put("background1", getImage("background1"));
 		mapOfImages.put("robot1", getImage("robot1"));
@@ -47,6 +62,15 @@ public class Images {
 		mapOfImages.put("wallT2", getImage("wallT2"));
 		mapOfImages.put("wallT3", getImage("wallT3"));
 		mapOfImages.put("wallT4", getImage("wallT4"));
+		
+	}
+	
+	public static void createImageInAll4Directions(String name) {
+		
+		mapOfImages.put(name + "L", Images.rotateImageByDegrees(mapOfImages.get(name), 90.0, null));
+		mapOfImages.put(name + "T", Images.rotateImageByDegrees(mapOfImages.get(name), 180.0, null));
+		mapOfImages.put(name + "R", Images.rotateImageByDegrees(mapOfImages.get(name), 270.0, null));
+		mapOfImages.put(name + "D", Images.rotateImageByDegrees(mapOfImages.get(name), 0.0, null));
 		
 	}
 	

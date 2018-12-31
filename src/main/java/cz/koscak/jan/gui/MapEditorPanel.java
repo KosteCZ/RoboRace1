@@ -150,7 +150,7 @@ public class MapEditorPanel extends JPanel {
 		
 		for (int i = 0; i < 12; i++) {
 			for (int j = 0; j < 12; j++) {
-				paintImage(g, i, j, "background1");	
+				paintImage(g, i, j, "background");	
 			}
 		}
 		//paintImage(g, 0, 0, "test1");
